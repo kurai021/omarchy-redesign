@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@theme {
+  --rgb-background-night: 26, 27, 38;
+  --color-background-night: rgb(var(--rgb-background-night));
+}
+
+body {
+  background: var(--color-background-night);
+}

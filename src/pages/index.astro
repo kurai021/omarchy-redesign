@@ -1,0 +1,12 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const canonicalUrl = "https://kurai021.github.io/omarchy-redesign";
+const excerpt = "";
+
+import Hero from "../components/Hero.svelte"
+---
+
+<Layout title="Omarchy - Beautiful, Fun & Agentic Linux by DHH" canonicalUrl={canonicalUrl} excerpt={excerpt}>
+  <Hero client:load />
+</Layout>
