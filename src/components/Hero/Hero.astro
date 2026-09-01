@@ -1,6 +1,7 @@
-<script>
+---
 import WteLogo from "./wtelogo/WteLogo.svelte";
-                                     
+import InstallCommand from "./InstallCommand/InstallCommand.svelte"
+
 const asciiArt = `                     ▒▒▒▒                                                                           
  ▒▒▒▒▒▒▒▒▒     ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒     ▒▒▒▒▒▒▒▒▒▒   ▒▒▒▒▒▒▒▒▒▒    ▒▒▒▒▒▒▒▒▒▒    ▒▒    ▒▒     ▒▒▒   ▒▒▒ 
 ▒▒▒▒   ▒▒▒▒   ▒▒▒    ▒▒▒▒   ▒▒▒▒   ▒▒▒    ▒▒▒▒  ▒▒▒▒    ▒▒▒   ▒▒▒    ▒▒▒▒  ▒▒▒▒    ▒▒▒   ▒▒▒▒   ▒▒▒▒
@@ -13,6 +14,50 @@ const asciiArt = `                     ▒▒▒▒
  ▒▒▒▒▒▒▒▒▒     ▒▒    ▒▒▒▒   ▒▒▒    ▒▒▒    ▒▒    ▒▒▒▒    ▒▒▒   ▒▒▒▒▒▒▒▒▒▒   ▒▒▒▒    ▒▒     ▒▒▒▒▒▒▒▒▒ 
   ▒▒▒▒▒▒▒       ▒    ▒▒▒▒   ▒▒     ▒▒▒    ▒     ▒▒▒▒    ▒▒▒   ▒▒▒▒▒▒▒▒     ▒▒▒▒    ▒       ▒▒▒▒▒▒▒  
                                                 ▒▒▒▒    ▒                                           `;
-</script>
-
-<WteLogo text={asciiArt} effect="laseretch" />
+---
+ 
+<section class="mx-auto flex max-w-5xl flex-col items-center gap-8 px-6 py-16 text-center sm:py-24">
+  <div class="w-full">
+    <WteLogo text={asciiArt} effect="laseretch" client:load />
+  </div>
+ 
+  <p class="text-sm text-text sm:text-base">
+    Beautiful, Fun &amp; Agentic Linux by <a
+      href="https://x.com/dhh"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="text-link underline decoration-dotted underline-offset-4 transition-colors duration-fast hover:text-link-hover"
+    >DHH</a>
+  </p>
+ 
+  <p class="text-balance text-text-muted">
+    The malleable OS for the age of agents. Where you can vibe your way through
+    every alteration, tweak, and desire. <a
+      href="https://learn.omacom.io"
+      class="text-link underline decoration-dotted underline-offset-4 transition-colors duration-fast hover:text-link-hover"
+    >Be the Omarch</a> and command your agent!
+  </p>
+ 
+  <div class="flex w-full flex-col items-center gap-4 pt-4 sm:w-auto">
+    <div class="w-full sm:min-w-[420px]">
+      <InstallCommand client:load />
+    </div>
+ 
+    <div class="flex flex-wrap items-center justify-center gap-3 text-sm">
+      <a
+        href="/manual"
+        class="rounded-md border border-border px-4 py-2 text-text transition-colors duration-fast hover:border-link hover:text-link"
+      >
+        Read the Manual
+      </a>
+      <a
+        href="https://github.com/basecamp/omarchy"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="rounded-md border border-border px-4 py-2 text-text transition-colors duration-fast hover:border-link hover:text-link"
+      >
+        View on GitHub
+      </a>
+    </div>
+  </div>
+</section>

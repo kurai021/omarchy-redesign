@@ -1,6 +1,6 @@
 <script>
   import { onMount, onDestroy } from 'svelte';
-  import { t as CanvasPlayback } from '../../utils/wte/playback.js';
+  import { t as CanvasPlayback } from '../../../utils/wte/playback.js';
 
   // Props personalizables
   export let text = 'ASCII ART HERE';
