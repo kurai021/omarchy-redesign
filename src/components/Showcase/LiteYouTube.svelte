@@ -9,7 +9,7 @@
   }
 </script>
 
-<div class="relative aspect-video w-full overflow-hidden rounded-lg border border-border bg-black">
+<div class="relative aspect-video w-full overflow-hidden rounded-lg bg-black">
   {#if playing}
     <iframe
       class="absolute inset-0 h-full w-full"

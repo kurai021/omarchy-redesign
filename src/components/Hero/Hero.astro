@@ -1,6 +1,7 @@
 ---
 import WteLogo from "./wtelogo/WteLogo.svelte";
 import InstallCommand from "./InstallCommand/InstallCommand.svelte"
+import TokioNightWallpaper from "../../assets/tokio-night-wallpaper.jpeg"
 
 const asciiArt = `                 ▄▄▄
  ▄█████▄    ▄███████████▄    ▄███████   ▄███████   ▄███████   ▄█   █▄    ▄█   █▄
@@ -15,50 +16,51 @@ const asciiArt = `                 ▄▄▄
 `;
 ---
  
-<section class="mx-auto flex max-w-5xl flex-col items-center gap-8 px-6 py-16 text-center">
-  <div class="w-full">
-    <a href="/omarchy-redesign" aria-label="Omarchy">
-      <WteLogo text={asciiArt} effect="laseretch" client:load />
-    </a>
-  </div>
- 
-  <p class="text-sm text-text sm:text-base">
-    Beautiful, Fun &amp; Agentic Linux by <a
-      href="https://x.com/dhh"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="text-link underline decoration-dotted underline-offset-4 transition-colors duration-fast hover:text-link-hover"
-    >DHH</a>
-  </p>
- 
-  <p class="text-balance text-text-muted">
-    The malleable OS for the age of agents. Where you can vibe your way through
-    every alteration, tweak, and desire. <a
-      href="https://omarchs.fyi"
-      class="text-link underline decoration-dotted underline-offset-4 transition-colors duration-fast hover:text-link-hover"
-    >Be the Omarch</a> and command your agent!
-  </p>
- 
-  <div class="flex w-full flex-col items-center gap-4 pt-4 sm:w-auto">
-    <div class="w-full sm:min-w-[420px]">
-      <InstallCommand client:load />
-    </div>
- 
-    <div class="flex flex-wrap items-center justify-center gap-3 text-sm">
-      <a
-        href="https://omarchy.org/manual"
-        class="rounded-md border border-border px-4 py-2 text-text transition-colors duration-fast hover:border-link hover:text-link"
-      >
-        Read the Manual
+<section class="mx-auto flex flex-col gap-8 text-center bg-cover bg-no-repeat min-h-screen" style={`background-image: url(${TokioNightWallpaper.src});`}>
+  <div class="w-full h-screen flex items-center justify-center bg-(--color-background)/[60%]">
+    <div class="mx-6 my-16">
+      <a href="/omarchy-redesign" aria-label="Omarchy">
+        <WteLogo text={asciiArt} effect="laseretch" client:load />
       </a>
-      <a
-        href="https://github.com/basecamp/omarchy"
+      <p class="text-sm text-text sm:text-base font-bold">
+      Beautiful, Fun &amp; Agentic Linux by <a
+        href="https://x.com/dhh"
         target="_blank"
         rel="noopener noreferrer"
-        class="rounded-md border border-border px-4 py-2 text-text transition-colors duration-fast hover:border-link hover:text-link"
-      >
-        View on GitHub
-      </a>
+        class="text-link underline decoration-dotted underline-offset-4 transition-colors duration-fast hover:text-link-hover"
+        >DHH</a>
+      </p>
+ 
+      <p class="text-balance text-text-muted font-bold">
+        The malleable OS for the age of agents. Where you can vibe your way through
+        <br>every alteration, tweak, and desire. <a
+          href="https://omarchs.fyi"
+          class="text-link underline decoration-dotted underline-offset-4 transition-colors duration-fast hover:text-link-hover"
+        >Be the Omarch</a> and command your agent!
+      </p>
+ 
+      <div class="flex w-full flex-col items-center gap-4 pt-4 sm:w-auto">
+        <div class="sm:min-w-[420px]">
+          <InstallCommand client:load />
+        </div>
+ 
+        <div class="flex flex-wrap items-center justify-center gap-3 text-sm">
+          <a
+            href="https://omarchy.org/manual"
+            class="rounded-md border border-border px-4 py-2 text-text transition-colors duration-fast hover:border-link hover:text-link bg-background-storm/60"
+          >
+          Read the Manual
+          </a>
+          <a
+            href="https://github.com/basecamp/omarchy"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="rounded-md border border-border px-4 py-2 text-text transition-colors duration-fast hover:border-link hover:text-link bg-background-storm/60"
+        >
+            View on GitHub
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
