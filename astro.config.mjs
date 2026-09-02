@@ -10,7 +10,9 @@ export default defineConfig({
   integrations: [svelte()],
   site: 'https://kurai021.github.io',
   base: '/omarchy-redesign',
-
+  devToolbar: {
+    enabled: false
+  },
   vite: {
     plugins: [tailwindcss()]
   }

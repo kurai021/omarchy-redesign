@@ -537,7 +537,7 @@ function Se(e, t, n, r, i = 56, a = 16, o = 36) {
 function Ce(e, t, n, r, i = 56, a = 16, o = 36) {
     let s = Math.max(1, window.devicePixelRatio || 1);
     e.width = Math.max(1, Math.floor(t * s)), e.height = Math.max(1, Math.floor(n * s)), e.style.width = `${t}px`, e.style.height = `${n}px`;
-    let c = e.getContext(`2d`);
+  let c = e.getContext(`2d`, { alpha: true });
     if (!c) throw Error(`2d canvas is unavailable`);
     c.setTransform(s, 0, 0, s, 0, 0);
     let l = xe(r);
@@ -773,7 +773,7 @@ var ze = class {
         let a = this.#e.canvas,
             o = Math.max(1, this.#e.width()),
             s = Math.max(1, this.#e.height());
-        if (this.#n = Ce(a, o, s, r, 0, 0, 0), this.#r = a.getContext(`2d`), t !== this.#h || !this.#e.connected()) return;
+      if (this.#n = Ce(a, o, s, r, 0, 0, 0), this.#r = a.getContext(`2d`, { alpha: true }), t !== this.#h || !this.#e.connected()) return;
         let c = Pe(this.#e.frameRate?.());
         this.#w = c, this.#T = K(c);
         let l = new n.Session(r, i, this.#n.columns, this.#n.rows, void 0, c);
