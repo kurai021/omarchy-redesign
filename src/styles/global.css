@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "@fontsource-variable/jetbrains-mono";
+@import "@fontsource-variable/space-grotesk";
 
 @theme {
   /* ---- Raw palette (Tokyo Night based) ---- */
@@ -13,7 +14,6 @@
   --rgb-terminal-white: 192, 202, 245;
   --rgb-turquoise: 180, 249, 248;
   --rgb-white: 255, 255, 255;
-  --rgb-win: 30, 30, 46;
 
   --color-background-night: rgb(var(--rgb-background-night));
   --color-background-storm: rgb(var(--rgb-background-storm));
@@ -29,7 +29,6 @@
   /* ---- Semantic roles (use these in components) ---- */
   --color-background: var(--color-background-night);
   --color-surface: var(--color-background-storm);
-  --color-win: rgb(var(--rgb-win));
 
   --color-accent: var(--color-green);
   --color-accent-hover: rgb(var(--rgb-green) / 0.85);
@@ -49,6 +48,7 @@
 
   /* ---- Typography ---- */
   --font-mono: 'JetBrains Mono Variable', monospace;
+  --font-display: 'Space Grotesk Variable', sans-serif;
   --font-size-small: 80%;
   --font-size-medium: 125%;
   --font-size-large: 200%;
@@ -74,6 +74,11 @@ body {
   color: var(--color-text);
   font-family: var(--font-mono);
   line-height: var(--leading-relaxed-terminal);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
 }
 
 ::selection {
