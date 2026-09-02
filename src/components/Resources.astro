@@ -1,0 +1,80 @@
+---
+const categories = [
+  {
+    title: "Get Started",
+    subtitle: "Install docs, and everything you need to feel safe running it.",
+    links: [
+      { label: "Manual", href: "https://omarchy.org/manual/" },
+      { label: "Download ISO", href: "https://iso.omarchy.org/omarchy-4.0.2.iso" },
+      { label: "Security", href: "https://omarchy.org/security/" },
+    ],
+  },
+  {
+    title: "Build & Extend",
+    subtitle: "Make Omarchy yours, or contribute back.",
+    links: [
+      { label: "Plugins", href: "https://omarchyplugins.com" },
+      { label: "GitHub", href: "https://github.com/omacom/omarchy" },
+      { label: "Brand Assets", href: "https://omarchy.org/brand/" },
+    ],
+  },
+  {
+    title: "Community",
+    subtitle: "Where the people actually are.",
+    links: [
+      { label: "Discord", href: "https://discord.gg/tXFUdasqhY" },
+      { label: "News", href: "https://omarchy.org/news/" },
+      { label: "Meetups", href: "https://omarchy.org/meetups/" },
+      { label: "Teams", href: "https://omarchy.org/teams/" },
+      { label: "Workstations", href: "https://omarchy.org/workstations/" },
+    ],
+  },
+  {
+    title: "The Foundation",
+    subtitle: "How Omacom Foundation gives back — and how you can too.",
+    links: [
+      { label: "Patrons", href: "https://omarchy.org/patrons/" },
+      { label: "Sponsorships", href: "https://omarchy.org/sponsorships/" },
+      { label: "Artists in Residence", href: "https://omarchy.org/air/" },
+      { label: "Merch", href: "https://supply.37signals.com/collections/omarchy" },
+    ],
+  },
+];
+---
+
+<section class="mx-auto max-w-5xl px-6 py-16">
+  <div class="mx-auto text-center">
+    <h2 class="text-xl font-semibold text-text-strong sm:text-2xl">
+      Everything else you might need
+    </h2>
+    <p class="mt-3 text-text-muted">
+      Docs, community, and how the project sustains itself.
+    </p>
+  </div>
+
+  <div class="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    {categories.map((category) => (
+      <div>
+        <h3 class="text-sm font-semibold uppercase tracking-wide text-text-strong">
+          {category.title}
+        </h3>
+        <p class="mt-1 text-xs text-text-muted">{category.subtitle}</p>
+
+        <ul class="mt-4 flex flex-col gap-2.5">
+          {category.links.map((link) => (
+            <li>
+              <a
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-sm text-link underline decoration-dotted underline-offset-4 transition-colors duration-fast hover:text-link-hover"
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </div>
+</section>
