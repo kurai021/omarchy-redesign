@@ -1,0 +1,50 @@
+---
+import Stats from './Stats.svelte';
+
+const FALLBACK = {
+  stars: 34300,
+  forks: 3500,
+  commits: 6222,
+};
+
+async function fetchRepoStats() {
+  try {
+    const res = await fetch("https://api.github.com/repos/omacom/omarchy", {
+      headers: { Accept: "application/vnd.github+json" },
+    });
+    if (!res.ok) throw new Error(`GitHub API responded ${res.status}`);
+    const data = await res.json();
+
+    let commits = FALLBACK.commits;
+    try {
+      const commitsRes = await fetch(
+        "https://api.github.com/repos/omacom/omarchy/commits?sha=quattro&per_page=1",
+        { headers: { Accept: "application/vnd.github+json" } }
+      );
+      const link = commitsRes.headers.get("link");
+      const match = link?.match(/&page=(\d+)>; rel="last"/);
+      if (match) commits = parseInt(match[1], 10);
+    } catch {
+      // keep fallback
+    }
+
+    return {
+      stars: data.stargazers_count ?? FALLBACK.stars,
+      forks: data.forks_count ?? FALLBACK.forks,
+      commits,
+    };
+  } catch {
+    return FALLBACK;
+  }
+}
+
+const stats = await fetchRepoStats();
+---
+
+<!-- Hidratación diferida: el cliente solo carga e hidrata cuando entra al viewport -->
+<Stats 
+  client:visible 
+  stars={stats.stars} 
+  forks={stats.forks} 
+  commits={stats.commits} 
+/>
