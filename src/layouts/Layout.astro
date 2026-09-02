@@ -1,6 +1,7 @@
 ---
 import "/src/styles/global.css"
 
+import AnnouncementBar from "../components/AnnouncementBar.svelte"
 const { title, excerpt, tags, canonicalUrl } = Astro.props;
 ---
 
@@ -17,7 +18,8 @@ const { title, excerpt, tags, canonicalUrl } = Astro.props;
     <meta name="author" content="Richard Armuelles">
     <title>{title ? `${title}` : "Omarchy"}</title>
 	</head>
-	<body>
+  <body>
+    <AnnouncementBar client:load />
     <slot />
 	</body>
 </html>

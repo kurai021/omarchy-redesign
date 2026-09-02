@@ -1,0 +1,84 @@
+---
+import LiteYouTube from "./Showcase/LiteYouTube.svelte";
+
+const creators = [
+  {
+    name: "NetworkChuck",
+    handle: "@NetworkChuck",
+    channelUrl: "https://www.youtube.com/@NetworkChuck",
+    videoId: "9SDkU5VDQEQ",
+    videoTitle: "You need to switch to Linux RIGHT NOW!!",
+    dhhQuote: "One million people have now viewed @NetworkChuck's amazing introduction to Omarchy!.",
+  },
+  {
+    name: "typecraft",
+    handle: "@typecraft_dev",
+    channelUrl: "https://www.youtube.com/@typecraft_dev",
+    videoId: "5JPYJfN7HY0",
+    videoTitle: "They finally fixed Linux",
+    dhhQuote: "The best technical deep dive on what Quattro brought to Omarchy.",
+  },
+  {
+    name: "LinuxBTW",
+    handle: "@LinuxBTW",
+    channelUrl: "https://www.youtube.com/@LinuxBTW",
+    videoId: "qBKMe8AatY0",
+    videoTitle: "I Didn't Expect Omarchy 4 to Be This Good",
+    dhhQuote: "During this intro itself, I already installed it! 😂. Great tour of Quattro from @LinuxBTW.",
+  },
+  {
+    name: "Alex Finn",
+    handle: "@AlexFinnOfficial",
+    channelUrl: "https://www.youtube.com/@AlexFinnOfficial",
+    videoId: "KO2T0oET9go",
+    videoTitle: "If you use AI, switch to Omarchy immediately",
+    dhhQuote: "We're in this together, Alex! Full speed ahead.",
+  },
+];
+---
+
+<section class="mx-auto max-w-5xl px-6 py-16">
+  <div class="mx-auto text-center">
+    <h2 class="text-xl font-semibold text-text-strong sm:text-2xl">
+      Creators can't stop talking about Quattro
+    </h2>
+    <p class="mt-3 text-text-muted">
+      Not sponsored posts — creators picking it up on their own and telling
+      their audience about it.
+    </p>
+  </div>
+
+  <div class="mt-12 grid gap-8 sm:grid-cols-2">
+    {creators.map((creator) => (
+      <div class="flex flex-col gap-3">
+        <LiteYouTube videoId={creator.videoId} title={creator.videoTitle} client:visible />
+
+        <div>
+          <p class="text-sm font-semibold text-text-strong">
+            {creator.channelUrl ? (
+              <a
+                href={creator.channelUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="transition-colors duration-fast hover:text-link"
+              >
+                {creator.name}
+              </a>
+            ) : (
+              creator.name
+            )}
+            {creator.handle && (
+              <span class="ml-1 font-normal text-text-muted">{creator.handle}</span>
+            )}
+          </p>
+          <p class="text-sm text-text-muted">{creator.videoTitle}</p>
+          {creator.dhhQuote && (
+            <p class="mt-1.5 text-xs text-highlight">
+              "{creator.dhhQuote}" <span class="text-text-muted">— DHH</span>
+            </p>
+          )}
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

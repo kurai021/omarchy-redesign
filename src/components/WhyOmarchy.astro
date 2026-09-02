@@ -1,0 +1,70 @@
+---
+const pillars = [
+  {
+    title: "Omakase, Curated by DHH",
+    body: "No need to build your own stack piece by piece. Arch, Hyprland, and Quickshell as the foundation, plus everything else you need to be productive from the very beginning: Neovim, Zoxide, Obsidian, Chromium, OBS Studio, Libreoffice, Spotify, Omarite (our own Markdown editor) and more. Zero bloat — only what he uses daily.",
+  },
+  {
+    title: "Agents at your fingertips, not just in the browser",
+    body: "Claude Code, Opencode, OpenAI Codex and other agents ship pre-installed with their own shortcuts. If something goes wrong, you don't just stare at a generic error message: you ask your agent what happened, and work together to find a solution.",
+    highlight: true,
+  },
+  {
+    title: "Beauty is Motivation",
+    body: "A beautiful system is not just an aesthetic whim: it's what makes you want to sit down and work. Omarchy bakes aesthetics into the design — it doesn't bolt them on afterward.",
+    footnote: {
+      text: "Based on a real idea by DHH",
+      href: "https://world.hey.com/dhh/beautiful-motivations-6fef7c73",
+    },
+  },
+  {
+    title: "It's not Windows. It's not macOS.",
+    body: "Heavy terminal, tiling window manager, configurations you edit manually. It doesn't try to be familiar – it tries to be better. An acquired taste, for anyone ready to step outside their comfort zone.",
+  },
+];
+---
+
+<section class="mx-auto max-w-5xl px-6 py-16">
+  <div class="mx-auto text-center">
+    <h2 class="text-xl font-semibold text-text-strong sm:text-2xl">
+      It's not just a grab bag of preinstalled packages.
+    </h2>
+    <p class="mt-3 text-text-muted">
+      Omarchy is a complete Linux distribution, built so you can start working
+      today – not spend the weekend setting it up.
+    </p>
+  </div>
+
+  <div class="mt-12 grid gap-6 sm:grid-cols-2">
+    {pillars.map((pillar) => (
+      <div
+        class:list={[
+          "flex flex-col gap-3 rounded-lg border p-6",
+          pillar.highlight
+            ? "border-accent/60 bg-accent-muted"
+            : "border-border bg-background-storm/40",
+        ]}
+      >
+        <h3 class="font-semibold text-text-strong">{pillar.title}</h3>
+        <p class="text-sm leading-relaxed text-text-muted">{pillar.body}</p>
+        {pillar.footnote && (
+          <a
+            href={pillar.footnote.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-auto text-xs text-link underline decoration-dotted underline-offset-4 transition-colors duration-fast hover:text-link-hover"
+          >
+            {pillar.footnote.text}
+          </a>
+        )}
+      </div>
+    ))}
+  </div>
+
+  <p class="mt-10 text-center text-sm text-text-muted">
+    <a
+      href="https://omarchy.org/manual"
+      class="text-link underline decoration-dotted underline-offset-4 transition-colors duration-fast hover:text-link-hover"
+    >Continue reading the manual</a> — it's short, concise, and worth your time.
+  </p>
+</section>
