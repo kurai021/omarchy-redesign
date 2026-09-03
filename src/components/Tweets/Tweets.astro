@@ -1,0 +1,83 @@
+---
+import fallbackTweets from './OmarchyTweets.json';
+import OmarchyReviews from './OmarchyReviews.svelte';
+
+interface Tweet {
+  id: string;
+  authorName: string;
+  username: string;
+  avatar: string;
+  text: string;
+  url: string;
+}
+
+const POSITIVE_KEYWORDS = ['love', 'amazing', 'great', 'awesome', 'best', 'incredible', 'fast', 'solid'];
+
+function isPositive(text: string): boolean {
+  const lower = text.toLowerCase();
+  return POSITIVE_KEYWORDS.some(word => lower.includes(word));
+}
+
+async function getOmarchyTweets(): Promise<Tweet[]> {
+  const token = import.meta.env.X_BEARER_TOKEN;
+
+  if (!token) {
+    return fallbackTweets;
+  }
+
+  try {
+    const query = encodeURIComponent('Omarchy -is:retweet lang:en');
+    const url = `https://api.twitter.com/2/tweets/search/recent?query=${query}&tweet.fields=author_id&expansions=author_id&user.fields=profile_image_url,name,username`;
+
+    const res = await fetch(url, {
+      headers: { Authorization: `Bearer ${token}` },
+    });
+
+    if (!res.ok) throw new Error(`X API HTTP ${res.status}`);
+
+    const data = await res.json();
+    if (!data.data || data.data.length === 0) return fallbackTweets;
+
+    const users = new Map();
+    data.includes?.users?.forEach((u: any) => users.set(u.id, u));
+
+    const positiveTweets: Tweet[] = data.data
+      .filter((t: any) => isPositive(t.text))
+      .map((t: any) => {
+        const user = users.get(t.author_id);
+        return {
+          id: t.id,
+          authorName: user?.name ?? "X User",
+          username: user?.username ?? "user",
+          avatar: user?.profile_image_url ?? "https://unavatar.io/x/user",
+          text: t.text,
+          url: `https://x.com/${user?.username}/status/${t.id}`
+        };
+      });
+
+    return positiveTweets.length > 0 ? positiveTweets : fallbackTweets;
+  } catch {
+    return fallbackTweets;
+  }
+}
+
+const tweets = await getOmarchyTweets();
+---
+
+<section class="px-6 py-16">
+  <div class="mx-auto max-w-5xl">
+    <div class="mx-auto text-center">
+      <h2 class="text-xl font-semibold text-text-strong sm:text-4xl">
+        Neither does our community.
+      </h2>
+      <p class="mt-3 text-text-muted">
+        These are some comments made by our omarches
+      </p>
+    </div>
+
+    <OmarchyReviews client:visible {tweets} />
+    
+  </div>
+</section>
+
+

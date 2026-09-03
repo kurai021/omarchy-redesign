@@ -42,7 +42,7 @@ const categories = [
 ];
 ---
 
-<section class="px-6 py-16">
+<section class="px-6 py-16 bg-(--color-background-storm)">
   <div class="mx-auto max-w-5xl">
     <div class="mx-auto text-center">
       <h2 class="text-xl font-semibold text-text-strong sm:text-4xl">
@@ -57,7 +57,7 @@ const categories = [
       {categories.map((category) => (
         <div class="bg-(--color-win) border border-border py-4 px-4">
           <h3 class="text-sm font-semibold uppercase tracking-wide text-text-strong">
-            {category.title}
+            <span class="text-lg text-(--color-green)">> </span>{category.title}
           </h3>
           <p class="mt-1 text-xs text-text-muted">{category.subtitle}</p>
 

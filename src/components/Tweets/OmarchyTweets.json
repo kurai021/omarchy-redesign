@@ -1,0 +1,66 @@
+[
+  {
+    "id": "0",
+    "authorName": "Alex Finn",
+    "username": "AlexFinn",
+    "avatar": "https://pbs.twimg.com/profile_images/1745232634278461440/7gQcr_R__reasonably_small.jpg",
+    "text": "Installed it on my old Alienware, now got it installed on my new Framework 13 Pro\n\nFirst installed Grok Bot. Told it to go on my Omarchy desktop, see all the apps I have on there, then install them all on my new laptop\n\n10 minutes later we are all set. AWESOME new hardware too",
+    "url": "https://x.com/AlexFinn/status/2093570170371690596"
+  },
+  {
+    "id": "1",
+    "authorName": "Don Ho, Esq.",
+    "username": "dhoesq",
+    "avatar": "https://pbs.twimg.com/profile_images/2023897151462678528/i5AwnKnB_reasonably_small.jpg",
+    "text": "Think about the last 8 months...\n\nJanuary was all about ClaudeBot/\n@openclaw\n \n\nJune was Fable and Hermes Agent\n\nJuly was \n@block\n's Buzz platform\n\nTwo weeks ago was \n@grok\n \n@bot\n \n\nYesterday I discovered \n@dhh\n's Omarchy\n\n2026 has been the year the world completely changed forever...",
+    "url": "https://x.com/dhoesq/status/2094008751972040929"
+  },
+  {
+    "id": "2",
+    "authorName": "Lars Jansen",
+    "username": "oldstackjournal",
+    "avatar": "https://pbs.twimg.com/profile_images/2062062218674569216/0N0GLONb_reasonably_small.jpg",
+    "text": "I finally looked into Omarchy and I can see why dev twitter is suddenly obsessed with it.\n\nIt’s basically Arch with somebody else making all the hard/endless decisions for you.\n\nHyprland. Terminal first. Keyboard driven. Neovim. Plain config files. Very little “click through six settings panels and hope for the best”\n\nThis style of OS makes a lot of sense now with ai. An agent can read the config, edit the config, install the package , restart he service, inspect the logs and change the workflow.\n\nWhich is weird because the future of ai computing might end up looking a lot like the old way of using computers: files, terminals, scripts, text and a machine you can actually understand.",
+    "url": "https://x.com/oldstackjournal/status/2094728212064723139"
+  },
+  {
+    "id": "3",
+    "authorName": "The Lunduke Journal",
+    "username": "LundukeJournal",
+    "avatar": "https://pbs.twimg.com/profile_images/1784836672175120384/XH6pIfYL_reasonably_small.jpg",
+    "text": "I see a lot of activists attacking Omarchy Linux for getting $8 Million in donations to fund its new Foundation.\n\n“Omarchy is compromised!”, they exclaim.  “It’s for billionaires… it’s not for the people!  It’s Oligarchy Linux.”\n\nThis is, quite frankly, retarded.\n\nWho funds Fedora?  IBM (and their multi-billion dollar subsidiary, Red Hat).\n\nWho funds the Linux kernel?  Microsoft, Meta, Amazon, IBM, and a bunch of other Billion dollar corporations (often run by billionaires).  All directly funding and controlling a quarter billion dollar per year trade organization.\n\nIf “Omarchy is compromised… it’s Oligarchy Linux!”… then so is Fedora.  And absolutely every system which uses the Linux kernel.  Without exception.\n\nYet we see this “3 generations of inbreeding” level of stupid being spouted all across Mastodon.",
+    "url": "https://x.com/LundukeJournal/status/2091724230035488984"
+  },
+  {
+    "id": "4",
+    "authorName": "Hybrid 🏃🏾",
+    "username": "markfenner",
+    "avatar": "https://pbs.twimg.com/profile_images/1990595715328823296/avyhr1T-_reasonably_small.jpg",
+    "text": "I’ve been running Ubuntu on my second machine for over a decade.\n\nAfter seeing another breakdown of Omarchy, this time from \n@NetworkChuck\n, I’m fully making the switch today.\n\nHe changed the entire desktop theme in seconds, used an AI agent to build a Quickshell plugin, handed a crashed process to the agent for diagnosis, ran games through Proton, and launched a Windows VM when Linux wasn’t enough.\n\nOmarchy isn’t just Arch with a nice desktop.\n\nIt starts with Arch, Hyprland, Quickshell, and a keyboard-first workflow, then gives you an environment you can continue reshaping around how you work (the linux boys calls this ricing).\n\nThe operating system can become another surface your agents can help you modify.\n\nUbuntu had a great run.\n\nOmarchy loading…",
+    "url": "https://x.com/markfenner/status/2090847611414589575"
+  },
+  {
+    "id": "5",
+    "authorName": "Brodie Robertson",
+    "username": "BrodieOnLinux",
+    "avatar": "https://pbs.twimg.com/profile_images/1601055731457089538/n1gyKryg_reasonably_small.jpg",
+    "text": "It is funny to me how much mental energy is being spent trying to find vulnerabilities in Omarchy as a dunk on the project inadvertently making it way more secure than it would have been if left alone.",
+    "url": "https://x.com/BrodieOnLinux/status/2094441549082017881"
+  },
+  {
+    "id": "6",
+    "authorName": "Janis Ozolins",
+    "username": "OzolinsJanis",
+    "avatar": "https://pbs.twimg.com/profile_images/1602909741872726017/UKMyxJDD_reasonably_small.jpg",
+    "text": "I'm enjoying the last dance with Mac OS. It's been beautiful 15+ years. But I can't resist this passion and energy around Omarchy. I've never seen myself running Linux, as a non-dev, but times have changed.\n\nAs a vibe-coding fanatic for the past year, it’s a no-brainer to switch to an OS where agents are first-class citizens and where customizing the OS is natural, unlike in Mac where it’s a bit of an uphill battle.",
+    "url": "https://x.com/OzolinsJanis/status/2093410871682691205"
+  },
+  {
+    "id": "7",
+    "authorName": "Dmitrii Kovanikov",
+    "username": "ChShersh",
+    "avatar": "https://pbs.twimg.com/profile_images/2035310399424442368/ViEPtTe0_reasonably_small.jpg",
+    "text": "Just finished @lexfridman interview with @DHH. Absolute hopecore. Truly a cure for AI psychosis.\n\nI'm excited about how a single person can actually compete with Apple, Google and Microsoft in the OS space with the help of agents. AI is an incredible amplifier. And I actually love the idea. I don't want to live in this Cyberpunk 2077 world where we only have these 5 corporations that exist forever, and that's it.\n\nEven if I don't agree with DHH on everything (although I still agree on many things), he's the person I can easily listen to for 5 hours.\n\nI just have to install Omarchy after this, don't I? You'll never guess which feature finally motivated me to get over the struggle of *checks notes* a 1-minute installation.",
+    "url": "https://x.com/ChShersh/status/2094099987281986006"
+  }
+]
