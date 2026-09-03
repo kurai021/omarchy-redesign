@@ -1,6 +1,6 @@
 ---
 import WteLogo from "./wtelogo/WteLogo.svelte";
-import InstallCommand from "./InstallCommand/InstallCommand.svelte"
+import InstallOptions from "./InstallCommand/InstallOptions.svelte"
 import TokioNightWallpaper from "../../assets/tokio-night-wallpaper.jpeg"
 
 const asciiArt = `                 ▄▄▄
@@ -40,9 +40,7 @@ const asciiArt = `                 ▄▄▄
       </p>
  
       <div class="flex w-full flex-col items-center gap-4 pt-4 sm:w-auto">
-        <div class="sm:min-w-[420px]">
-          <InstallCommand client:load />
-        </div>
+        <InstallOptions client:load />
  
         <div class="flex flex-wrap items-center justify-center gap-3 text-sm">
           <a

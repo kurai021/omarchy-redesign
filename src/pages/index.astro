@@ -6,19 +6,25 @@ const excerpt = "";
 
 import Hero from "../components/Hero/Hero.astro";
 import Stats from "../components/Stats/StatsSection.astro";
-import WhyOmarchy from "../components/WhyOmarchy.astro"
-import Showcase from "../components/Showcase/Showcase.astro"
-import CreatorSpotlight from "../components/CreatorSpotlight.astro"
-import Tweets from "../components/Tweets/Tweets.astro"
-import Resources from "../components/Resources.astro"
+import WhyOmarchy from "../components/WhyOmarchy.astro";
+import Showcase from "../components/Showcase/Showcase.astro";
+import CreatorSpotlight from "../components/CreatorSpotlight.astro";
+import Tweets from "../components/Tweets/Tweets.astro";
+import ClosingTagline from "../components/ClosingTagline.astro";
+import Resources from "../components/Resources.astro";
 ---
 
-<Layout title="Omarchy - Beautiful, Fun & Agentic Linux by DHH" canonicalUrl={canonicalUrl} excerpt={excerpt}>
-  <Hero />
-  <Stats />
-  <WhyOmarchy />
-  <Showcase />
-  <CreatorSpotlight />
-  <Tweets />
-  <Resources />
+<Layout
+	title="Omarchy - Beautiful, Fun & Agentic Linux by DHH"
+	canonicalUrl={canonicalUrl}
+	excerpt={excerpt}
+>
+	<Hero />
+	<Stats />
+	<WhyOmarchy />
+	<Showcase />
+	<CreatorSpotlight />
+	<Tweets />
+	<ClosingTagline />
+	<Resources />
 </Layout>

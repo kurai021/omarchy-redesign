@@ -1,29 +1,47 @@
 ---
-import "/src/styles/global.css"
+import "/src/styles/global.css";
 
-import AnnouncementBar from "../components/AnnouncementBar.svelte"
+import AnnouncementBar from "../components/AnnouncementBar.svelte";
 import Footer from "../components/Footer.astro";
+import CommandPalette from "../components/Nav/CommandPalette.svelte";
+import ThemeCycler from "../components/ThemeCycler/ThemeCycler.svelte";
 const { title, excerpt, tags, canonicalUrl } = Astro.props;
 ---
 
 <html lang="en">
 	<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/omarchy-redesign/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/omarchy-redesign/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/omarchy-redesign/favicon-16x16.png">
-    <link rel="manifest" href="/omarchy-redesign/site.webmanifest">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="/omarchy-redesign/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="/omarchy-redesign/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="/omarchy-redesign/favicon-16x16.png"
+		/>
+		<link rel="manifest" href="/omarchy-redesign/site.webmanifest" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-    <meta name="description" content={excerpt} />
-    <meta name="keywords" content={tags} />
-    <meta name="author" content="Richard Armuelles">
-    <title>{title ? `${title}` : "Omarchy"}</title>
+		<meta name="description" content={excerpt} />
+		<meta name="keywords" content={tags} />
+		<meta name="author" content="Richard Armuelles" />
+		<title>{title ? `${title}` : "Omarchy"}</title>
 	</head>
-  <body>
-    <AnnouncementBar client:load />
-    <slot />
-    <Footer />
+	<body id="top">
+		<AnnouncementBar client:load />
+		<slot />
+		<Footer />
+		<CommandPalette client:load />
+		<ThemeCycler client:load />
 	</body>
 </html>
