@@ -165,12 +165,19 @@
 	});
 </script>
 
-<div class="pre-container">
+<div class="pre-container w-full h-auto relative">
 	<pre bind:this={preElement}>{text}</pre>
 
-	<span class="pre__wte" bind:this={holderElement}>
-		<canvas bind:this={canvasElement} aria-hidden="true"></canvas>
-	</span>
+	<div
+		class="pre__wte flex items-center h-auto absolute"
+		bind:this={holderElement}
+	>
+		<canvas
+			class="flex flex-wrap"
+			bind:this={canvasElement}
+			aria-hidden="true"
+		></canvas>
+	</div>
 </div>
 
 <style>
@@ -191,16 +198,12 @@
 	}
 
 	.pre__wte {
-		display: block;
-		position: absolute;
 		inset: 0;
 		overflow: hidden;
 	}
 
 	canvas {
-		display: block;
 		mix-blend-mode: screen;
-		position: absolute;
 		transform-origin: 0;
 	}
 </style>

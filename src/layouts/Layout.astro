@@ -30,14 +30,13 @@ const { title, excerpt, tags, canonicalUrl } = Astro.props;
 			href="/omarchy-redesign/favicon-16x16.png"
 		/>
 		<link rel="manifest" href="/omarchy-redesign/site.webmanifest" />
-		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<meta name="description" content={excerpt} />
 		<meta name="keywords" content={tags} />
 		<meta name="author" content="Richard Armuelles" />
 		<title>{title ? `${title}` : "Omarchy"}</title>
 	</head>
-	<body id="top">
+	<body id="top" class="min-h-screen w-full m-0 p-0 overflow-x-hidden">
 		<AnnouncementBar client:load />
 		<slot />
 		<Footer />
