@@ -659,9 +659,10 @@ var ke = `modulepreload`,
   X = null;
 
 function Z(e) {
-  // import.meta.env.BASE_URL obtiene '/omarchy_redesign/' automáticamente
-  const base = import.meta.env.BASE_URL;
-  return new URL(`${base}${e}`.replace(/\/+/g, '/'), window.location.origin).href;
+  const base = import.meta.env.BASE_URL; // Devuelve '/omarchy-redesign/' o '/omarchy-redesign'
+  // Asegura que no haya dobles barras ni falten barras
+  const cleanPath = `${base}/${e}`.replace(/\/+/g, '/');
+  return new URL(cleanPath, window.location.origin).href;
 }
 
 function Ne(e) {
