@@ -71,6 +71,10 @@
   --duration-fast: 0.15s;
 }
 
+:root {
+  --hero-bg-image: url("../assets/tokio-night-wallpaper.jpeg");
+}
+
 body {
   background: var(--color-background);
   color: var(--color-text);
