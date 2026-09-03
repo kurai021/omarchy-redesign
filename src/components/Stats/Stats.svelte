@@ -5,6 +5,7 @@
   export let stars = 34300;
   export let forks = 3500;
   export let commits = 6222;
+  export let plugins = 1900;
 
   let sectionElement;
   let isVisible = false;
@@ -14,6 +15,7 @@
   let currentForks = 0;
   let currentCommits = 0;
   let currentMoney = 0; // Para los $12.6M
+  let currentPlugins = 0;
 
   const TARGET_MONEY = 12.6; // En millones
 
@@ -38,6 +40,7 @@
       currentForks = forks * easeProgress;
       currentCommits = commits * easeProgress;
       currentMoney = TARGET_MONEY * easeProgress;
+      currentPlugins = plugins * easeProgress;
 
       if (progress < 1) {
         requestAnimationFrame(update);
@@ -69,7 +72,7 @@
 
 <section bind:this={sectionElement} class="mx-auto max-w-5xl px-6 py-16 sm:py-24">
   <div class="mx-auto text-center">
-    <h2 class="text-xl font-semibold text-text-strong sm:text-4xl">
+    <h2 class="text-xl font-semibold text-text-strong sm:text-5xl">
       Real numbers, not adjectives
     </h2>
     <p class="mt-3 text-text-muted">
@@ -77,7 +80,7 @@
     </p>
   </div>
 
-  <div class="mt-12 grid grid-cols-2 gap-6 sm:grid-cols-4">
+  <div class="mt-12 grid grid-cols-2 gap-6 sm:grid-cols-5">
     <div class="flex flex-col items-center gap-1 rounded-lg border border-border bg-background-storm/40 py-6 text-center">
       <span class="font-display text-3xl font-bold text-accent sm:text-4xl">
         ${currentMoney.toFixed(1)}M
@@ -105,5 +108,13 @@
       </span>
       <span class="text-xs text-text-muted sm:text-sm">Commits on Quattro</span>
     </div>
+
+    <div class="flex flex-col items-center gap-1 rounded-lg border border-border bg-background-storm/40 py-6 text-center">
+      <span class="font-display text-3xl font-bold text-accent sm:text-4xl">
+        {formatCompact(currentPlugins)}
+      </span>
+      <span class="text-xs text-text-muted sm:text-sm">Plugins on Marketplace</span>
+    </div>
+
   </div>
 </section>

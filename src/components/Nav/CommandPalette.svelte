@@ -34,8 +34,8 @@
 		},
 		{
 			label: "View on GitHub",
-			hint: "github.com/basecamp/omarchy",
-			href: "https://github.com/basecamp/omarchy",
+			hint: "github.com/omacom/omarchy",
+			href: "https://github.com/omacom/omarchy",
 			external: true,
 		},
 		{
