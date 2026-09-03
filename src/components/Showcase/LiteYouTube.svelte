@@ -81,7 +81,7 @@
 		on:click={closeModal}
 	>
 		<div
-			class="relative aspect-video w-full"
+			class="relative aspect-video w-full 2xl:max-w-5xl 2xl:max-h-[80vh]"
 			on:click={(e) => e.stopPropagation()}
 		>
 			<div class="flex">
